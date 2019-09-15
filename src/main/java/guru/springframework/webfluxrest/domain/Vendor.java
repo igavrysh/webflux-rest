@@ -1,18 +1,24 @@
 package guru.springframework.webfluxrest.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @Document
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Vendor {
 
     @Id
-    private String id;
+    public String id;
 
-    private String firstName;
+    public String firstName;
 
-    private String lastName;
+    public String lastName;
 
 }
