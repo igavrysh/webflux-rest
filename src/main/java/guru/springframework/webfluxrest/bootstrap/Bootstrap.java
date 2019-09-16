@@ -5,7 +5,9 @@ import guru.springframework.webfluxrest.domain.Vendor;
 import guru.springframework.webfluxrest.repositories.CategoryRepository;
 import guru.springframework.webfluxrest.repositories.VendorRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Bootstrap implements CommandLineRunner {
 
     private final CategoryRepository categoryRepository;
