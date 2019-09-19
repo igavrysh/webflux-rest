@@ -57,7 +57,10 @@ public class VendorControllerTest {
         BDDMockito.given(vendorRepository.saveAll(any(Publisher.class)))
                 .willReturn(Flux.just(Vendor.builder().build()));
 
-        Mono<Vendor> vendorToSaveMono = Mono.just(Vendor.builder().firstName("First Name for Vendor").build());
+        Mono<Vendor> vendorToSaveMono = Mono.just(Vendor.builder()
+                .firstName("First Name")
+                .lastName("Johns")
+                .build());
 
         webTestClient.post()
                 .uri("/api/v1/vendors")
